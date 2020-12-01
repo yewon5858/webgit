@@ -1,15 +1,15 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
         <title>진주 유등 축제</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script type = "text/javascript" src="./map.js"></script>
-        <script type = "text/javascript" src="./top.js"></script>
-        <link rel="stylesheet" href="index.css">
-        <link rel="stylesheet" href= 
-"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <script type = "text/javascript" src="{% static 'map.js' %}"></script>
+        <script type = "text/javascript" src="{% static 'top.js' %}"></script>
+        <link rel="stylesheet" href="{% static 'index.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     </head>
     <body>
         <div class="container">
@@ -30,41 +30,41 @@
                 <div class = "map">
                   <!-- 구역1 -->
                   <div class= "map_area1" onclick="area(event,'.map_area1');" data-target="#area1">
-                    <img src="location_icon1.png" class="location" id = "location1_icon1" title="진주성 야경" data-target="#jinju_castle"
+                    <img src="{% static 'img/location_icon1.png' %}" class="location" id = "location1_icon1" title="진주성 야경" data-target="#jinju_castle"
                     onclick="icon(event, '#location1_icon1');"
                     onmouseenter = "zoomIn(event)"
                     onmouseleave = "zoomOut(event)"/>
-                    <img src="location_icon1.png" class="location" id = "location1_icon2" title="불꽃놀이" data-target='#fireworks'
+                    <img src="{% static 'img/location_icon1.png' %}" class="location" id = "location1_icon2" title="불꽃놀이" data-target='#fireworks'
                     onclick="icon(event, '#location1_icon2');"
                     onmouseenter = "zoomIn(event)"
                     onmouseleave = "zoomOut(event)"/>
-                    <img src="location_icon1.png" class="location" id = "location1_icon3" title="수상등" data-target='#water_light'
+                    <img src="{% static 'img/location_icon1.png' %}" class="location" id = "location1_icon3" title="수상등" data-target='#water_light'
                     onclick="icon(event, '#location1_icon3');"
                     onmouseenter = "zoomIn(event)"
                     onmouseleave = "zoomOut(event)"/>
                   </div> 
                   <!-- 구역2 -->
                   <div class= "map_area2" onclick="area(event, '.map_area2');" data-target='#area2' >
-                    <img src="location_icon2.png" class="location" id = "location2_icon1" title="드라마 세트장" data-target='#drama_set'
+                    <img src="{% static 'img/location_icon2.png' %}" class="location" id = "location2_icon1" title="드라마 세트장" data-target='#drama_set'
                     onclick="icon(event, '#location2_icon1');"
                     onmouseenter = "zoomIn(event)"
                     onmouseleave = "zoomOut(event)"/>
-                    <img src="location_icon2.png" class="location" id = "location2_icon2" title="먹거리" data-target='#food_zone'
+                    <img src="{% static 'img/location_icon2.png' %}" class="location" id = "location2_icon2" title="먹거리" data-target='#food_zone'
                     onclick="icon(event, '#location2_icon2');"
                     onmouseenter = "zoomIn(event)"
                     onmouseleave = "zoomOut(event)"/>
                   </div> 
                   <!-- 구역3 -->
                   <div class= "map_area3" onclick="area(event, '.map_area3');" data-target='#area3'>
-                    <img src="location_icon3.png" class="location" id = "location3_icon1" title="소망등 터널" data-target='#hope_light_tunnel'
+                    <img src="{% static 'img/location_icon3.png' %}" class="location" id = "location3_icon1" title="소망등 터널" data-target='#hope_light_tunnel'
                     onclick="icon(event, '#location3_icon1');"
                     onmouseenter = "zoomIn(event)"
                     onmouseleave = "zoomOut(event)"/>
-                    <img src="location_icon3.png" class="location" id = "location3_icon2" title="유등 띄우기" data-target='#floating_light'
+                    <img src="{% static 'img/location_icon3.png' %}" class="location" id = "location3_icon2" title="유등 띄우기" data-target='#floating_light'
                     onclick="icon(event, '#location3_icon2');"
                     onmouseenter = "zoomIn(event)"
                     onmouseleave = "zoomOut(event)"/>
-                    <img src="location_icon3.png" class="location" id = "location3_icon3" title="진주교" data-target='#jinju_bridge'
+                    <img src="{% static 'img/location_icon3.png' %}" class="location" id = "location3_icon3" title="진주교" data-target='#jinju_bridge'
                     onclick="icon(event, '#location3_icon3');"
                     onmouseenter = "zoomIn(event)"
                     onmouseleave = "zoomOut(event)"/>
@@ -82,11 +82,11 @@
                 <div class="container1"> 
                     <div class="slide"> 
                         <div class="slideNumber">1</div> 
-                        <img src= "web/night1.jpg"> 
+                        <img src= "{% static 'img/web/night1.jpg' %}"> 
                     </div> 
                     <div class="slide"> 
                         <div class="slideNumber">2</div> 
-                        <img src= "web/night2.jpg"> 
+                        <img src= "{% static 'img/web/night2.jpg' %}"> 
                     </div> 
                     <div class="slide"> 
                         <div class="slideNumber">3</div> 
