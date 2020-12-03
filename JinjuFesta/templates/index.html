@@ -1,23 +1,428 @@
+  
 {% load static %}
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
         <title>진주 유등 축제</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type = "text/javascript" src="{% static 'map.js' %}"></script>
+        <script type = "text/javascript" src="{% static 'top.js' %}"></script>
+        <link rel="stylesheet" href="{% static 'index.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     </head>
     <body>
         <div class="container">
-            <div class="navbar">
-                <div class="index"></div>
-                <div class="timetable"></div>
-                <div class="area1"></div>
-                <div class="area2"></div>
-                <div class="area3"></div>
-            </div>
+            <ul class="navbar">
+                <li><a href="#" class="nav_title">진주 유등축제</a></li>
+                <hr style="margin:20px 0">
+                <li><a href="#" class>달력</a></li>
+                <li><a href="#" class>구역1</a></li>
+                <li><a href="#" class>구역2</a></li>
+                <li><a href="#" class>구역3</a></li>
+            </ul>
+            
             <div class="main_content">
-                <div class="~~"></div>
-                <!-- 추가바람 -->
+                <div id="banner">
+                    진주 유등축제 일정
+                </div>
+                  <hr style="margin:10px 0;">
+                <div class = "map">
+                  <!-- 구역1 -->
+                  <div class= "map_area1" onclick="area(event,'.map_area1');" data-target="#area1">
+                    <img src="{% static 'img/location_icon1.png' %}" class="location" id = "location1_icon1" title="진주성 야경" data-target="#jinju_castle"
+                    onclick="icon(event, '#location1_icon1');"
+                    onmouseenter = "zoomIn(event)"
+                    onmouseleave = "zoomOut(event)"/>
+                    <img src="{% static 'img/location_icon1.png' %}" class="location" id = "location1_icon2" title="불꽃놀이" data-target='#fireworks'
+                    onclick="icon(event, '#location1_icon2');"
+                    onmouseenter = "zoomIn(event)"
+                    onmouseleave = "zoomOut(event)"/>
+                    <img src="{% static 'img/location_icon1.png' %}" class="location" id = "location1_icon3" title="수상등" data-target='#water_light'
+                    onclick="icon(event, '#location1_icon3');"
+                    onmouseenter = "zoomIn(event)"
+                    onmouseleave = "zoomOut(event)"/>
+                  </div> 
+                  <!-- 구역2 -->
+                  <div class= "map_area2" onclick="area(event, '.map_area2');" data-target='#area2' >
+                    <img src="{% static 'img/location_icon2.png' %}" class="location" id = "location2_icon1" title="드라마 세트장" data-target='#drama_set'
+                    onclick="icon(event, '#location2_icon1');"
+                    onmouseenter = "zoomIn(event)"
+                    onmouseleave = "zoomOut(event)"/>
+                    <img src="{% static 'img/location_icon2.png' %}" class="location" id = "location2_icon2" title="먹거리" data-target='#food_zone'
+                    onclick="icon(event, '#location2_icon2');"
+                    onmouseenter = "zoomIn(event)"
+                    onmouseleave = "zoomOut(event)"/>
+                  </div> 
+                  <!-- 구역3 -->
+                  <div class= "map_area3" onclick="area(event, '.map_area3');" data-target='#area3'>
+                    <img src="{% static 'img/location_icon3.png' %}" class="location" id = "location3_icon1" title="소망등 터널" data-target='#hope_light_tunnel'
+                    onclick="icon(event, '#location3_icon1');"
+                    onmouseenter = "zoomIn(event)"
+                    onmouseleave = "zoomOut(event)"/>
+                    <img src="{% static 'img/location_icon3.png' %}" class="location" id = "location3_icon2" title="유등 띄우기" data-target='#floating_light'
+                    onclick="icon(event, '#location3_icon2');"
+                    onmouseenter = "zoomIn(event)"
+                    onmouseleave = "zoomOut(event)"/>
+                    <img src="{% static 'img/location_icon3.png' %}" class="location" id = "location3_icon3" title="진주교" data-target='#jinju_bridge'
+                    onclick="icon(event, '#location3_icon3');"
+                    onmouseenter = "zoomIn(event)"
+                    onmouseleave = "zoomOut(event)"/>
+                  </div> 
+                </div>
+                <br>
+                <div class = "areabox1">
+                <center> 
+                    <h2 id = "area1">구역 1</h2>
+                    <br>
+                    <p id = "jinju_castle">진주성의 야경</p>
+                </center> 
+                       
+                <!-- 이미지는 임의로 넣어놨습니당.. 파일로 바꾸깅 -->
+                <div class="container1"> 
+                    <div class="slide"> 
+                        <div class="slideNumber">1</div> 
+                        <img src= "{% static 'img/web/night1.jpg' %}"> 
+                    </div> 
+                    <div class="slide"> 
+                        <div class="slideNumber">2</div> 
+                        <img src= "{% static 'img/web/night2.jpg' %}"> 
+                    </div> 
+                    <div class="slide"> 
+                        <div class="slideNumber">3</div> 
+                        <img src= "{% static 'img/web/night4.jpg' %}"> 
+                    </div> 
+                   
+                    <!-- 전 후 넘어가는 아이콘 -->
+                    <a class="previous" onclick="moveSlides(-1)"> 
+                        <i class="fa fa-chevron-circle-left"></i> 
+                    </a> 
+                    <a class="next" onclick="moveSlides(1)"> 
+                        <i class="fa fa-chevron-circle-right"></i> 
+                    </a>
+                    <br> 
+                   
+                    <div style="text-align:center"> 
+                        <span class="footerdot" 
+                            onclick="activeSlide(1)"> 
+                        </span> 
+                        <span class="footerdot"
+                            onclick="activeSlide(2)"> 
+                        </span> 
+                        <span class="footerdot" 
+                            onclick="activeSlide(3)"> 
+                        </span> 
+                    </div>
+                </div>
+                
+
+                <center> 
+                    <br>
+                    <p id = "fireworks">불꽃놀이</p>
+                </center> 
+                       
+                <!-- 이미지는 임의로 넣어놨습니당.. 파일로 바꾸깅1 -->
+                <div class="container1"> 
+                    <div class="slide1"> 
+                        <div class="slideNumber">1</div> 
+                        <img src= "{% static 'img/web/fire1.jpg' %}"> 
+                    </div> 
+                    <div class="slide1"> 
+                        <div class="slideNumber">2</div> 
+                        <img src= "{% static 'img/web/fire2.jpg' %}"> 
+                    </div> 
+                    <div class="slide1"> 
+                        <div class="slideNumber">3</div> 
+                        <img src= "{% static 'img/web/fire4.jpg' %}"> 
+                    </div> 
+                   
+                    <!-- 전 후 넘어가는 아이콘 -->
+                    <a class="previous" onclick="moveSlides1(-1)"> 
+                        <i class="fa fa-chevron-circle-left"></i> 
+                    </a> 
+                    <a class="next" onclick="moveSlides1(1)"> 
+                        <i class="fa fa-chevron-circle-right"></i> 
+                    </a>
+                    <br> 
+                   
+                    <div style="text-align:center"> 
+                        <span class="footerdot1" 
+                            onclick="activeSlide1(1)"> 
+                        </span> 
+                        <span class="footerdot1"
+                            onclick="activeSlide1(2)"> 
+                        </span> 
+                        <span class="footerdot1" 
+                            onclick="activeSlide1(3)"> 
+                        </span> 
+                    </div>
+                </div>
+                <center> 
+                    <br>
+                    <p id = "water_light">수상등</p>
+                </center> 
+                       
+                <!-- 이미지는 임의로 넣어놨습니당.. 파일로 바꾸깅2 -->
+                <div class="container1"> 
+                    <div class="slide2"> 
+                        <div class="slideNumber">1</div> 
+                        <img src= "web/lamp2.jpg"> 
+                    </div> 
+                    <div class="slide2"> 
+                        <div class="slideNumber">2</div> 
+                        <img src= "web/lamp3.jpg"> 
+                    </div> 
+                    <div class="slide2"> 
+                        <div class="slideNumber">3</div> 
+                        <img src= "web/lamp4.jpg"> 
+                    </div> 
+                   
+                    <!-- 전 후 넘어가는 아이콘 - 페이지 분위기 따라 수정-->
+                    <a class="previous" onclick="moveSlides2(-1)"> 
+                        <i class="fa fa-chevron-circle-left"></i> 
+                    </a> 
+                    <a class="next" onclick="moveSlides2(1)"> 
+                        <i class="fa fa-chevron-circle-right"></i> 
+                    </a>
+                    <br> 
+                   
+                    <div style="text-align:center"> 
+                        <span class="footerdot2" 
+                            onclick="activeSlide2(1)"> 
+                        </span> 
+                        <span class="footerdot2"
+                            onclick="activeSlide2(2)"> 
+                        </span> 
+                        <span class="footerdot2" 
+                            onclick="activeSlide2(3)"> 
+                        </span> 
+                    </div>
+                </div>
+                <br>
             </div>
-            <div class="footer"></div>
+            <br>
+            <div class = "areabox2">
+                <center> 
+                    <h2 id = "area2">구역 2</h2>
+                    <br>
+                    <p id = "drama_set">드라마 세트</p>
+                </center> 
+                       
+                <!-- 이미지는 임의로 넣어놨습니당.. 파일로 바꾸깅3 -->
+                <div class="container1"> 
+                    <div class="slide3"> 
+                        <div class="slideNumber">1</div> 
+                        <img src= "web/drama1.jpg"> 
+                    </div> 
+                    <div class="slide3"> 
+                        <div class="slideNumber">2</div> 
+                        <img src= "web/drama2.jpg"> 
+                    </div> 
+                    <div class="slide3"> 
+                        <div class="slideNumber">3</div> 
+                        <img src= "web/drama3.jpg"> 
+                    </div> 
+                   
+                    <!-- 전 후 넘어가는 아이콘 -->
+                    <a class="previous" onclick="moveSlides3(-1)"> 
+                        <i class="fa fa-chevron-circle-left"></i> 
+                    </a> 
+                    <a class="next" onclick="moveSlides3(1)"> 
+                        <i class="fa fa-chevron-circle-right"></i> 
+                    </a>
+                    <br> 
+                   
+                    <div style="text-align:center"> 
+                        <span class="footerdot3" 
+                            onclick="activeSlide3(1)"> 
+                        </span> 
+                        <span class="footerdot3"
+                            onclick="activeSlide3(2)"> 
+                        </span> 
+                        <span class="footerdot3" 
+                            onclick="activeSlide3(3)"> 
+                        </span> 
+                    </div>
+                </div>
+                       
+                <center> 
+                    <br>
+                    <p id ="food_zone">먹거리</p>
+                </center> 
+                       
+                <!-- 이미지는 임의로 넣어놨습니당.. 파일로 바꾸깅4 -->
+                <div class="container1"> 
+                    <div class="slide4"> 
+                        <div class="slideNumber">1</div> 
+                        <img src= "web/food1.jpg"> 
+                    </div> 
+                    <div class="slide4"> 
+                        <div class="slideNumber">2</div> 
+                        <img src= "web/food2.jpg"> 
+                    </div> 
+                    <div class="slide4"> 
+                        <div class="slideNumber">3</div> 
+                        <img src= "web/food3.jpg"> 
+                    </div> 
+                    <!-- 전 후 넘어가는 아이콘 -->
+                    <a class="previous" onclick="moveSlides4(-1)"> 
+                        <i class="fa fa-chevron-circle-left"></i> 
+                    </a> 
+                    <a class="next" onclick="moveSlides4(1)"> 
+                        <i class="fa fa-chevron-circle-right"></i> 
+                    </a>
+                    <br> 
+                   
+                    <div style="text-align:center"> 
+                        <span class="footerdot4" 
+                            onclick="activeSlide4(1)"> 
+                        </span> 
+                        <span class="footerdot4"
+                            onclick="activeSlide4(2)"> 
+                        </span> 
+                        <span class="footerdot4" 
+                            onclick="activeSlide4(3)"> 
+                        </span> 
+                    </div>
+                </div>
+                <br>
+            </div>
+            <br>
+            <div class = "areabox3">
+                    <center> 
+                        <h2 id = "area3">구역 3</h2>
+                        <br>
+                        <p id="hope_light_tunnel">소망등 터널</p>
+                    </center> 
+                           
+                    <!-- 이미지는 임의로 넣어놨습니당.. 파일로 바꾸깅3 -->
+                    <div class="container1"> 
+                        <div class="slide5"> 
+                            <div class="slideNumber">1</div> 
+                            <img src= "web/somang1.jpg"> 
+                        </div> 
+                        <div class="slide5"> 
+                            <div class="slideNumber">2</div> 
+                            <img src= "web/somang2.jpg"> 
+                        </div> 
+                        <div class="slide5"> 
+                            <div class="slideNumber">3</div> 
+                            <img src= "web/somang3.jpg"> 
+                        </div> 
+                       
+                        <!-- 전 후 넘어가는 아이콘 -->
+                        <a class="previous" onclick="moveSlides5(-1)"> 
+                            <i class="fa fa-chevron-circle-left"></i> 
+                        </a> 
+                        <a class="next" onclick="moveSlides5(1)"> 
+                            <i class="fa fa-chevron-circle-right"></i> 
+                        </a>
+                        <br> 
+                       
+                        <div style="text-align:center"> 
+                            <span class="footerdot5" 
+                                onclick="activeSlide5(1)"> 
+                            </span> 
+                            <span class="footerdot5"
+                                onclick="activeSlide5(2)"> 
+                            </span> 
+                            <span class="footerdot5" 
+                                onclick="activeSlide5(3)"> 
+                            </span> 
+                        </div>
+                    </div>
+                           
+                    <center> 
+                        <br>
+                        <p id = "floating_light">유등 띄우기</p>
+                    </center> 
+                           
+                    <!-- 이미지는 임의로 넣어놨습니당.. 파일로 바꾸깅1 -->
+                    <div class="container1"> 
+                        <div class="slide6"> 
+                            <div class="slideNumber">1</div> 
+                            <img src= "web/llamp1.jpg"> 
+                        </div> 
+                        <div class="slide6"> 
+                            <div class="slideNumber">2</div> 
+                            <img src= "web/llamp2.jpg"> 
+                        </div> 
+                        <div class="slide6"> 
+                            <div class="slideNumber">3</div> 
+                            <img src= "web/llamp3.jpg"> 
+                        </div> 
+                    <!-- 전 후 넘어가는 아이콘 -->
+                    <a class="previous" onclick="moveSlides6(-1)"> 
+                        <i class="fa fa-chevron-circle-left"></i> 
+                    </a> 
+                    <a class="next" onclick="moveSlides6(1)"> 
+                        <i class="fa fa-chevron-circle-right"></i> 
+                    </a>
+                    <br> 
+                   
+                    <div style="text-align:center"> 
+                        <span class="footerdot6" 
+                            onclick="activeSlide6(1)"> 
+                        </span> 
+                        <span class="footerdot6"
+                            onclick="activeSlide6(2)"> 
+                        </span> 
+                        <span class="footerdot6" 
+                            onclick="activeSlide6(3)"> 
+                        </span> 
+                    </div>
+                </div>
+                <center> 
+                    <br>
+                    <p id = "jinju_bridge">진주교</p>
+                </center> 
+                       
+                <!-- 이미지는 임의로 넣어놨습니당.. 파일로 바꾸깅1 -->
+                <div class="container1"> 
+                    <div class="slide7"> 
+                        <div class="slideNumber">1</div> 
+                        <img src= "web/bridge1.jpg"> 
+                    </div> 
+                    <div class="slide7"> 
+                        <div class="slideNumber">2</div> 
+                        <img src= "web/bridge2.jpg"> 
+                    </div> 
+                    <div class="slide7"> 
+                        <div class="slideNumber">3</div> 
+                        <img src= "web/bridge3.jpg"> 
+                    </div> 
+                <!-- 전 후 넘어가는 아이콘 -->
+                <a class="previous" onclick="moveSlides7(-1)"> 
+                    <i class="fa fa-chevron-circle-left"></i> 
+                </a> 
+                <a class="next" onclick="moveSlides7(1)"> 
+                    <i class="fa fa-chevron-circle-right"></i> 
+                </a>
+                <br> 
+               
+                <div style="text-align:center"> 
+                    <span class="footerdot7" 
+                        onclick="activeSlide7(1)"> 
+                    </span> 
+                    <span class="footerdot7"
+                        onclick="activeSlide7(2)"> 
+                    </span> 
+                    <span class="footerdot7" 
+                        onclick="activeSlide7(3)"> 
+                    </span> 
+                </div>
+            </div>
         </div>
+                <script src="slider.js"></script>
+            <div class="footer"></div>
+        <a id="back-to-top"></a>
+            <script src="slider.js"></script>
+            <!-- <div class="footer"></div> -->
+       
+        <script src="upbutton.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <footer> footer  <footer>
+     </div>
     </body>
 </html>
