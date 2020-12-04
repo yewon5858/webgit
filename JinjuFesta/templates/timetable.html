@@ -5,6 +5,7 @@
         <title>진주 유등 축제 일정</title>
         <link type="text/css" rel="stylesheet" href="{% static 'timetable.css' %}">
         <script src="{% static 'timetable.js' %}"></script>
+        <script type = "text/javascript" src="{% static '.nav.js' %}"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <script>
@@ -41,14 +42,15 @@
         </script>
       </head>
     <body>
-        <div class="container">
-            <ul class="navbar">
-                <li><a href="#" class="main_nav">진주 유등축제</a></li>
+       <div class="container">
+            <div class="back-space"></div>
+            <ul class="navbar" id="sidebox">
+                <li><a href="#" class="nav_title">진주 유등축제</a></li>
                 <hr style="margin:20px 0">
-                <li><a href="#" class="A">    달력</a></li>
-                <li><a href="#" class="B">    구역1</a></li>
-                <li><a href="#" class="B">    구역2</a></li>
-                <li><a href="#" class="B">    구역3</a></li>
+                <li><a href="#" class>달력</a></li>
+                <li><a href="#" class>구역1</a></li>
+                <li><a href="#" class>구역2</a></li>
+                <li><a href="#" class>구역3</a></li>
             </ul>
             <div class="main_content">
               <div class="content">
