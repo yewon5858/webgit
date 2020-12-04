@@ -1,13 +1,15 @@
 {% load static %}
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html>
     <head>
         <title>진주 유등 축제 일정</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link type="text/css" rel="stylesheet" href="{% static 'timetable.css' %}">
         <script src="{% static 'timetable.js' %}"></script>
-        <script type = "text/javascript" src="{% static '.nav.js' %}"></script>
+        <script type = "text/javascript" src="{% static 'nav.js' %}"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.4.0/main.min.js"></script>
         <script>
           // 텝 메뉴 구현
           $(document).ready(function(){
@@ -21,8 +23,6 @@
               $("#"+tab_id).addClass('current');
             });
           });
-
-
 
           // 올라가는 버튼 구현 //
           $(function(){
@@ -40,12 +40,89 @@
             });
           });
         </script>
+        <script>
+
+          document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+        
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+              plugins: [ 'interaction', 'dayGrid' ],
+              defaultDate: '2020-02-12',
+              editable: true,
+              eventLimit: true, // allow "more" link when too many events
+              events: [
+                {
+                  title: 'All Day Event',
+                  start: '2020-02-01'
+                },
+                {
+                  title: 'Long Event',
+                  start: '2020-02-07',
+                  end: '2020-02-10'
+                },
+                {
+                  groupId: 999,
+                  title: 'Repeating Event',
+                  start: '2020-02-09T16:00:00'
+                },
+                {
+                  groupId: 999,
+                  title: 'Repeating Event',
+                  start: '2020-02-16T16:00:00'
+                },
+                {
+                  title: 'Conference',
+                  start: '2020-02-11',
+                  end: '2020-02-13'
+                },
+                {
+                  title: 'Meeting',
+                  start: '2020-02-12T10:30:00',
+                  end: '2020-02-12T12:30:00'
+                },
+                {
+                  title: 'Lunch',
+                  start: '2020-02-12T12:00:00'
+                },
+                {
+                  title: 'Meeting',
+                  start: '2020-02-12T14:30:00'
+                },
+                {
+                  title: 'Happy Hour',
+                  start: '2020-02-12T17:30:00'
+                },
+                {
+                  title: 'Dinner',
+                  start: '2020-02-12T20:00:00'
+                },
+                {
+                  title: 'Birthday Party',
+                  start: '2020-02-13T07:00:00'
+                },
+                {
+                  title: 'Click for Google',
+                  url: 'http://google.com/',
+                  start: '2020-02-28'
+                }
+              ]
+            });
+        
+            calendar.render();
+          });
+        </script>
+        <style>
+          #calendar {
+            max-width: auto;
+            margin: 0 auto;
+          }
+        </style>
       </head>
     <body>
-       <div class="container">
-            <div class="back-space"></div>
+        <div class="container">
+          <div class="back-space"></div>
             <ul class="navbar" id="sidebox">
-                <li><a href="#" class="nav_title">진주 유등축제</a></li>
+                <li><a href="{% url 'index' %}" class="main_nav">진주 유등축제</a></li>
                 <hr style="margin:20px 0">
                 <li><a href="#" class>달력</a></li>
                 <li><a href="#" class>구역1</a></li>
@@ -60,11 +137,12 @@
                 <hr style="margin:10px 0;">
                 <!-- 탭메뉴 -->
                 <ul class="tabs">
-                  <li class="tab-link current" data-tab="tab_1">행사 일정표</li>
+                  <li class="tab-link current" data-tab="calendar">행사 일정표</li>
                   <li class="tab-link" data-tab="tab_2">체험마당 및 부대행사</li>
                   <li class="tab-link" data-tab="tab_3">동반행사</li>
                 </ul>
                 <!-- 시간표 -->
+                <div id='calendar' class="tab-content current"></div>
                 <div id="tab_1" class="tab-content current">
                     <table border='1'>
                       <tr id="title">
