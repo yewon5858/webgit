@@ -1,73 +1,70 @@
-{% load static %}
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
         <title>진주 유등 축제</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script type = "text/javascript" src="{% static 'map.js' %}"></script>
-        <script type = "text/javascript" src="{% static 'top.js' %}"></script>
-        <script type = "text/javascript" src="{% static 'nav.js' %}"></script>
-        <link rel="stylesheet" href="{% static 'index.css' %}">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <script type = "text/javascript" src="./map.js"></script>
+        <script type = "text/javascript" src="./top.js"></script>
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href= 
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     </head>
-   
     <body>
         <div class="container">
-            <div class="back-space"></div>
-            <ul class="navbar" id="sidebox">
+            <ul class="navbar">
                 <li><a href="#" class="nav_title">진주 유등축제</a></li>
                 <hr style="margin:20px 0">
                 <li><a href="#" class>달력</a></li>
-                <li><a href={% url '.area1' %} >구역1</a></li>
+                <li><a href="#" class>구역1</a></li>
                 <li><a href="#" class>구역2</a></li>
                 <li><a href="#" class>구역3</a></li>
             </ul>
             
             <div class="main_content">
                 <div id="banner">
-                    진주 유등축제
+                    진주 유등축제 일정
                 </div>
                   <hr style="margin:10px 0;">
                 <div class = "map">
                   <!-- 구역1 -->
                   <div class= "map_area1" onclick="area(event,'.map_area1');" data-target="#area1">
-                    <img src="{% static 'img/location_icon1.png' %}" class="location" id = "location1_icon1" title="진주성 야경" data-target="#jinju_castle"
+                    <img src="location_icon1.png" class="location" id = "location1_icon1" title="진주성 야경" data-target="#jinju_castle"
                     onclick="icon(event, '#location1_icon1');"
                     onmouseenter = "zoomIn(event)"
                     onmouseleave = "zoomOut(event)"/>
-                    <img src="{% static 'img/location_icon1.png' %}" class="location" id = "location1_icon2" title="불꽃놀이" data-target='#fireworks'
+                    <img src="location_icon1.png" class="location" id = "location1_icon2" title="불꽃놀이" data-target='#fireworks'
                     onclick="icon(event, '#location1_icon2');"
                     onmouseenter = "zoomIn(event)"
                     onmouseleave = "zoomOut(event)"/>
-                    <img src="{% static 'img/location_icon1.png' %}" class="location" id = "location1_icon3" title="수상등" data-target='#water_light'
+                    <img src="location_icon1.png" class="location" id = "location1_icon3" title="수상등" data-target='#water_light'
                     onclick="icon(event, '#location1_icon3');"
                     onmouseenter = "zoomIn(event)"
                     onmouseleave = "zoomOut(event)"/>
                   </div> 
                   <!-- 구역2 -->
                   <div class= "map_area2" onclick="area(event, '.map_area2');" data-target='#area2' >
-                    <img src="{% static 'img/location_icon2.png' %}" class="location" id = "location2_icon1" title="드라마 세트장" data-target='#drama_set'
+                    <img src="location_icon2.png" class="location" id = "location2_icon1" title="드라마 세트장" data-target='#drama_set'
                     onclick="icon(event, '#location2_icon1');"
                     onmouseenter = "zoomIn(event)"
                     onmouseleave = "zoomOut(event)"/>
-                    <img src="{% static 'img/location_icon2.png' %}" class="location" id = "location2_icon2" title="먹거리" data-target='#food_zone'
+                    <img src="location_icon2.png" class="location" id = "location2_icon2" title="먹거리" data-target='#food_zone'
                     onclick="icon(event, '#location2_icon2');"
                     onmouseenter = "zoomIn(event)"
                     onmouseleave = "zoomOut(event)"/>
                   </div> 
                   <!-- 구역3 -->
                   <div class= "map_area3" onclick="area(event, '.map_area3');" data-target='#area3'>
-                    <img src="{% static 'img/location_icon3.png' %}" class="location" id = "location3_icon1" title="소망등 터널" data-target='#hope_light_tunnel'
+                    <img src="location_icon3.png" class="location" id = "location3_icon1" title="소망등 터널" data-target='#hope_light_tunnel'
                     onclick="icon(event, '#location3_icon1');"
                     onmouseenter = "zoomIn(event)"
                     onmouseleave = "zoomOut(event)"/>
-                    <img src="{% static 'img/location_icon3.png' %}" class="location" id = "location3_icon2" title="유등 띄우기" data-target='#floating_light'
+                    <img src="location_icon3.png" class="location" id = "location3_icon2" title="유등 띄우기" data-target='#floating_light'
                     onclick="icon(event, '#location3_icon2');"
                     onmouseenter = "zoomIn(event)"
                     onmouseleave = "zoomOut(event)"/>
-                    <img src="{% static 'img/location_icon3.png' %}" class="location" id = "location3_icon3" title="진주교" data-target='#jinju_bridge'
+                    <img src="location_icon3.png" class="location" id = "location3_icon3" title="진주교" data-target='#jinju_bridge'
                     onclick="icon(event, '#location3_icon3');"
                     onmouseenter = "zoomIn(event)"
                     onmouseleave = "zoomOut(event)"/>
@@ -75,7 +72,7 @@
                 </div>
                 <br>
                 <div class = "areabox1">
-                <center> a 
+                <center> 
                     <h2 id = "area1">구역 1</h2>
                     <br>
                     <p id = "jinju_castle">진주성의 야경</p>
@@ -85,15 +82,15 @@
                 <div class="container1"> 
                     <div class="slide"> 
                         <div class="slideNumber">1</div> 
-                        <img src= "{% static 'img/web/night1.jpg' %}"> 
+                        <img src= "web/night1.jpg"> 
                     </div> 
                     <div class="slide"> 
                         <div class="slideNumber">2</div> 
-                        <img src= "{% static 'img/web/night2.jpg' %}"> 
+                        <img src= "web/night2.jpg"> 
                     </div> 
                     <div class="slide"> 
                         <div class="slideNumber">3</div> 
-                        <img src= "{% static 'img/web/night4.jpg' %}"> 
+                        <img src= "web/night4.jpg"> 
                     </div> 
                    
                     <!-- 전 후 넘어가는 아이콘 -->
@@ -128,15 +125,15 @@
                 <div class="container1"> 
                     <div class="slide1"> 
                         <div class="slideNumber">1</div> 
-                        <img src= "{% static 'img/web/fire1.jpg' %}"> 
+                        <img src= "web/fire1.jpg"> 
                     </div> 
                     <div class="slide1"> 
                         <div class="slideNumber">2</div> 
-                        <img src= "{% static 'img/web/fire2.jpg' %}"> 
+                        <img src= "web/fire2.jpg"> 
                     </div> 
                     <div class="slide1"> 
                         <div class="slideNumber">3</div> 
-                        <img src= "{% static 'img/web/fire4.jpg' %}"> 
+                        <img src= "web/fire4.jpg"> 
                     </div> 
                    
                     <!-- 전 후 넘어가는 아이콘 -->
@@ -169,15 +166,15 @@
                 <div class="container1"> 
                     <div class="slide2"> 
                         <div class="slideNumber">1</div> 
-                        <img src= "{% static 'img/web/lamp2.jpg' %}"> 
+                        <img src= "web/lamp2.jpg"> 
                     </div> 
                     <div class="slide2"> 
                         <div class="slideNumber">2</div> 
-                        <img src= "{% static 'img/web/lamp3.jpg' %}"> 
+                        <img src= "web/lamp3.jpg"> 
                     </div> 
                     <div class="slide2"> 
                         <div class="slideNumber">3</div> 
-                        <img src= "{% static 'img/web/lamp4.jpg' %}"> 
+                        <img src= "web/lamp4.jpg"> 
                     </div> 
                    
                     <!-- 전 후 넘어가는 아이콘 - 페이지 분위기 따라 수정-->
@@ -215,15 +212,15 @@
                 <div class="container1"> 
                     <div class="slide3"> 
                         <div class="slideNumber">1</div> 
-                        <img src= "{% static 'img/web/drama1.jpg' %}"> 
+                        <img src= "web/drama1.jpg"> 
                     </div> 
                     <div class="slide3"> 
                         <div class="slideNumber">2</div> 
-                        <img src= "{% static 'img/web/drama2.jpg' %}"> 
+                        <img src= "web/drama2.jpg"> 
                     </div> 
                     <div class="slide3"> 
                         <div class="slideNumber">3</div> 
-                        <img src= "{% static 'img/web/drama3.jpg' %}"> 
+                        <img src= "web/drama3.jpg"> 
                     </div> 
                    
                     <!-- 전 후 넘어가는 아이콘 -->
@@ -257,15 +254,15 @@
                 <div class="container1"> 
                     <div class="slide4"> 
                         <div class="slideNumber">1</div> 
-                        <img src= "{% static 'img/web/food1.jpg' %}"> 
+                        <img src= "web/food1.jpg"> 
                     </div> 
                     <div class="slide4"> 
                         <div class="slideNumber">2</div> 
-                        <img src= "{% static 'img/web/food2.jpg' %}"> 
+                        <img src= "web/food2.jpg"> 
                     </div> 
                     <div class="slide4"> 
                         <div class="slideNumber">3</div> 
-                        <img src= "{% static 'img/web/food3.jpg' %}"> 
+                        <img src= "web/food3.jpg"> 
                     </div> 
                     <!-- 전 후 넘어가는 아이콘 -->
                     <a class="previous" onclick="moveSlides4(-1)"> 
@@ -302,15 +299,15 @@
                     <div class="container1"> 
                         <div class="slide5"> 
                             <div class="slideNumber">1</div> 
-                            <img src= "{% static 'img/web/somang1.jpg' %}"> 
+                            <img src= "web/somang1.jpg"> 
                         </div> 
                         <div class="slide5"> 
                             <div class="slideNumber">2</div> 
-                            <img src= "{% static 'img/web/somang2.jpg' %}"> 
+                            <img src= "web/somang2.jpg"> 
                         </div> 
                         <div class="slide5"> 
                             <div class="slideNumber">3</div> 
-                            <img src= "{% static 'img/web/somang3.jpg' %}"> 
+                            <img src= "web/somang3.jpg"> 
                         </div> 
                        
                         <!-- 전 후 넘어가는 아이콘 -->
@@ -344,15 +341,15 @@
                     <div class="container1"> 
                         <div class="slide6"> 
                             <div class="slideNumber">1</div> 
-                            <img src= "{% static 'img/web/llamp1.jpg' %}"> 
+                            <img src= "web/llamp1.jpg"> 
                         </div> 
                         <div class="slide6"> 
                             <div class="slideNumber">2</div> 
-                            <img src= "{% static 'img/web/llamp2.jpg' %}"> 
+                            <img src= "web/llamp2.jpg"> 
                         </div> 
                         <div class="slide6"> 
                             <div class="slideNumber">3</div> 
-                            <img src= "{% static 'img/web/llamp3.jpg' %}"> 
+                            <img src= "web/llamp3.jpg"> 
                         </div> 
                     <!-- 전 후 넘어가는 아이콘 -->
                     <a class="previous" onclick="moveSlides6(-1)"> 
@@ -384,15 +381,15 @@
                 <div class="container1"> 
                     <div class="slide7"> 
                         <div class="slideNumber">1</div> 
-                        <img src= "{% static 'img/web/bridge1.jpg' %}"> 
+                        <img src= "web/bridge1.jpg"> 
                     </div> 
                     <div class="slide7"> 
                         <div class="slideNumber">2</div> 
-                        <img src= "{% static 'img/web/bridge2.jpg' %}"> 
+                        <img src= "web/bridge2.jpg"> 
                     </div> 
                     <div class="slide7"> 
                         <div class="slideNumber">3</div> 
-                        <img src= "{% static 'img/web/bridge3.jpg' %}"> 
+                        <img src= "web/bridge3.jpg"> 
                     </div> 
                 <!-- 전 후 넘어가는 아이콘 -->
                 <a class="previous" onclick="moveSlides7(-1)"> 
@@ -416,10 +413,10 @@
                 </div>
             </div>
         </div>
-                <script src="{% static 'slider.js' %}"></script>
+                <script src="slider.js"></script>
             <div class="footer"></div>
         <a id="back-to-top"></a>
-            <script src="{% static 'slider.js' %}"></script>
+            <script src="slider.js"></script>
             <!-- <div class="footer"></div> -->
        
         <script src="upbutton.js"></script>
