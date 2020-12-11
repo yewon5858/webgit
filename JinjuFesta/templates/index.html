@@ -8,13 +8,14 @@
         <script type = "text/javascript" src="{% static 'map.js' %}"></script>
         <script type = "text/javascript" src="{% static 'top.js' %}"></script>
         <script type = "text/javascript" src="{% static 'nav.js' %}"></script>
-        <script type = "text/javascript" src="{% static 'layer.js' %}"></script>
+        <script type = "text/javascript" src="{% static 'popup.js' %}"></script>
         <link rel="stylesheet" href="{% static 'index.css' %}">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     </head>
    
     <body>
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <div class="container">
             <div class="back-space"></div>
             <ul class="navbar" id="sidebox">
@@ -80,6 +81,8 @@
                     <h2 id = "area1">구역 1</h2>
                     <br>
                     <a href="#area1_1" class="btn-example">진주성의 야경</a>
+                    <p id="nigth"></p>
+                    <p id = "jinju"></p>
                 </center> 
                        
                 <!-- 이미지는 임의로 넣어놨습니당.. 파일로 바꾸깅 -->
@@ -125,14 +128,15 @@
                         <div class="pop-container">
                             <div class="pop-conts">
                                 <!--content //-->
-                                <p class="ctxt mb20">Thank you.<br>
-                                    Your registration was submitted successfully.<br>
-                                    Selected invitees will be notified by e-mail on JANUARY 24th.<br><br>
-                                    Hope to see you soon!
+                                <p class="ctxt mb20">진주성의 야경<br>
+                                    임진왜란의 전적지이자,
+                                    지금은 진주시의 랜드마크로 자리잡은 진주성의 야경입니다.
+                                    성벽의 불빛과 위엄있는 촉석루의 모습을 볼 수 있어요.
+                                    
                                 </p>
                 
                                 <div class="btn-r">
-                                    <a href="#" class="btn-layerClose">Close</a>
+                                    <a href="#night" class="btn-layerClose">Close</a>
                                 </div>
                                 <!--// content-->
                             </div>
@@ -188,10 +192,11 @@
                         <div class="pop-container">
                             <div class="pop-conts">
                                 <!--content //-->
-                                <p class="ctxt mb20">Thank you.<br>
-                                    Your registration was submitted successfully.<br>
-                                    Selected invitees will be notified by e-mail on JANUARY 24th.<br><br>
-                                    Hope to see you soon!
+                                <p class="ctxt mb20">불꽃놀이<br>
+                                    유등축제의 하이라이트, 불꽃놀이 입니다.
+                                    하늘을 수놓은 불꽃들의 향연을 놓치지 마세요.
+                                    불꽃놀이 일정은 달력 페이지를 참고해주세요.
+                                    
                                 </p>
                 
                                 <div class="btn-r">
@@ -253,10 +258,11 @@
                     <div class="pop-container">
                         <div class="pop-conts">
                             <!--content //-->
-                            <p class="ctxt mb20">Thank you.<br>
-                                Your registration was submitted successfully.<br>
-                                Selected invitees will be notified by e-mail on JANUARY 24th.<br><br>
-                                Hope to see you soon!
+                            <p class="ctxt mb20">수상등<br>
+                                남강을 따라 잔잔하게 떠 있는 수상등입니다.
+                                다양한 색깔과 모양을 가진 수상등을 감상하며
+                                그 속에 숨겨진 이야기들도 찾아보아요.
+                                
                             </p>
             
                             <div class="btn-r">
@@ -319,10 +325,11 @@
                         <div class="pop-container">
                             <div class="pop-conts">
                                 <!--content //-->
-                                <p class="ctxt mb20">Thank you.<br>
-                                    Your registration was submitted successfully.<br>
-                                    Selected invitees will be notified by e-mail on JANUARY 24th.<br><br>
-                                    Hope to see you soon!
+                                <p class="ctxt mb20">드라마 세트<br>
+                                    유등축제 기간의 진주에서는 
+                                    코리아 드라마 페스티벌이 개최됩니다. 
+                                    전 세계로 뻗어나가는 한국의 드라마를 다채롭게 체험해보세요.
+                                    
                                 </p>
                 
                                 <div class="btn-r">
@@ -383,10 +390,11 @@
                     <div class="pop-container">
                         <div class="pop-conts">
                             <!--content //-->
-                            <p class="ctxt mb20">Thank you.<br>
-                                Your registration was submitted successfully.<br>
-                                Selected invitees will be notified by e-mail on JANUARY 24th.<br><br>
-                                Hope to see you soon!
+                            <p class="ctxt mb20">먹거리<br>
+                                축제의 별미는 뭐니뭐니해도 먹거리!
+                                강변을 따라 펼쳐진 다양한 먹거리부스과 함께
+                                배부른 축제를 즐겨보세요.
+                                
                             </p>
             
                             <div class="btn-r">
@@ -449,10 +457,11 @@
                             <div class="pop-container">
                                 <div class="pop-conts">
                                     <!--content //-->
-                                    <p class="ctxt mb20">Thank you.<br>
-                                        Your registration was submitted successfully.<br>
-                                        Selected invitees will be notified by e-mail on JANUARY 24th.<br><br>
-                                        Hope to see you soon!
+                                    <p class="ctxt mb20">소망등 터널<br>
+                                        사람들의 소중한 소망이 담긴 터널을 걸어보세요.
+                                        당신의 소망은 무엇인가요?
+                                        공식홈페이지의 신청을 통해 당신의 소망도 달 수 있답니다.
+                                        
                                     </p>
                     
                                     <div class="btn-r">
@@ -511,10 +520,11 @@
                         <div class="pop-container">
                             <div class="pop-conts">
                                 <!--content //-->
-                                <p class="ctxt mb20">Thank you.<br>
-                                    Your registration was submitted successfully.<br>
-                                    Selected invitees will be notified by e-mail on JANUARY 24th.<br><br>
-                                    Hope to see you soon!
+                                <p class="ctxt mb20">유등띄우기<br>
+                                    유등은 임진왜란 중 성 밖의 가족에게 안부를 전하는 
+                                    통신수단으로 사용되었다고 합니다.
+                                    당신의 이야기가 담긴 유등을 강물에 띄워 보내보세요. 
+                                    
                                 </p>
                 
                                 <div class="btn-r">
@@ -573,10 +583,9 @@
                     <div class="pop-container">
                         <div class="pop-conts">
                             <!--content //-->
-                            <p class="ctxt mb20">Thank you.<br>
-                                Your registration was submitted successfully.<br>
-                                Selected invitees will be notified by e-mail on JANUARY 24th.<br><br>
-                                Hope to see you soon!
+                            <p class="ctxt mb20">진주교<br>
+                                진주교를 따라 길게 펼쳐진 앵두알 터널이 신비로움을 자아냅니다. 
+                                반짝이는 진주교에서 인생샷 남기기, 빼놓지 마세요!
                             </p>
             
                             <div class="btn-r">
