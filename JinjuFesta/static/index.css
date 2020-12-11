@@ -329,7 +329,7 @@ ul.navbar li{
   #back-to-top:active {
     background-color: #2c2c2c;
   }
-  #back-to-top.show {
+   #back-to-top.show {
     opacity: 1;
     visibility: visible;
   }
