@@ -11,6 +11,36 @@ $(document).ready(function(){
 	});
 });
 
+// 달력 1
+document.addEventListener('DOMContentLoaded', function() {
+  var calendarEl = document.getElementById('calendar1');
+  
+  var calendar = new FullCalendar.Calendar(calendarEl, {
+    initialView: 'dayGridMonth'
+  });
+  calendar.render();
+});
+
+// 달력 2
+document.addEventListener('click', function() {
+  var calendarEl = document.getElementById('calendar2');
+  
+  var calendar = new FullCalendar.Calendar(calendarEl, {
+    initialView: 'dayGridMonth'
+  });
+  calendar.render();
+});
+
+// 달력 3
+document.addEventListener('click', function() {
+  var calendarEl = document.getElementById('calendar3');
+  
+  var calendar = new FullCalendar.Calendar(calendarEl, {
+    initialView: 'dayGridMonth'
+  });
+  calendar.render();
+});
+
 // 올라가는 버튼 구현 //
 $(function(){
 $('#back-to-top').on('click',function(e){

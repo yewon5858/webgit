@@ -2,121 +2,17 @@
 <!DOCTYPE html> 
 <html>
     <head>
+        <meta charset='utf-8' />
         <title>진주 유등 축제 일정</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link type="text/css" rel="stylesheet" href="{% static 'timetable.css' %}">
-        <script src="{% static 'timetable.js' %}"></script>
+        <script type = "text/javascript" src="{% static 'timetable.js' %}"></script>
         <script type = "text/javascript" src="{% static 'nav.js' %}"></script>
-        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        
         <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.4.0/main.min.js"></script>
-        <script>
-          // 텝 메뉴 구현
-          $(document).ready(function(){
-            $('ul.tabs li').click(function(){
-              var tab_id = $(this).attr('data-tab');
-
-              $('ul.tabs li').removeClass('current');
-              $('.tab-content').removeClass('current');
-
-              $(this).addClass('current');
-              $("#"+tab_id).addClass('current');
-            });
-          });
-
-          // 올라가는 버튼 구현 //
-          $(function(){
-          $('#back-to-top').on('click',function(e){
-          e.preventDefault();
-          $('html,body').animate({scrollTop:0},600);
-            });
-            
-            $(window).scroll(function() {
-              if ($(document).scrollTop() > 100) {
-                $('#back-to-top').addClass('show');
-              } else {
-                $('#back-to-top').removeClass('show');
-              }
-            });
-          });
-        </script>
-        <script>
-
-          document.addEventListener('DOMContentLoaded', function() {
-            var calendarEl = document.getElementById('calendar');
-        
-            var calendar = new FullCalendar.Calendar(calendarEl, {
-              plugins: [ 'interaction', 'dayGrid' ],
-              defaultDate: '2020-02-12',
-              editable: true,
-              eventLimit: true, // allow "more" link when too many events
-              events: [
-                {
-                  title: 'All Day Event',
-                  start: '2020-02-01'
-                },
-                {
-                  title: 'Long Event',
-                  start: '2020-02-07',
-                  end: '2020-02-10'
-                },
-                {
-                  groupId: 999,
-                  title: 'Repeating Event',
-                  start: '2020-02-09T16:00:00'
-                },
-                {
-                  groupId: 999,
-                  title: 'Repeating Event',
-                  start: '2020-02-16T16:00:00'
-                },
-                {
-                  title: 'Conference',
-                  start: '2020-02-11',
-                  end: '2020-02-13'
-                },
-                {
-                  title: 'Meeting',
-                  start: '2020-02-12T10:30:00',
-                  end: '2020-02-12T12:30:00'
-                },
-                {
-                  title: 'Lunch',
-                  start: '2020-02-12T12:00:00'
-                },
-                {
-                  title: 'Meeting',
-                  start: '2020-02-12T14:30:00'
-                },
-                {
-                  title: 'Happy Hour',
-                  start: '2020-02-12T17:30:00'
-                },
-                {
-                  title: 'Dinner',
-                  start: '2020-02-12T20:00:00'
-                },
-                {
-                  title: 'Birthday Party',
-                  start: '2020-02-13T07:00:00'
-                },
-                {
-                  title: 'Click for Google',
-                  url: 'http://google.com/',
-                  start: '2020-02-28'
-                }
-              ]
-            });
-        
-            calendar.render();
-          });
-        </script>
-        <style>
-          #calendar {
-            max-width: auto;
-            margin: 0 auto;
-          }
-        </style>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.4.0/main.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.4.0/locales-all.min.js"></script>
       </head>
     <body>
         <div class="container">
@@ -137,137 +33,25 @@
                 <hr style="margin:10px 0;">
                 <!-- 탭메뉴 -->
                 <ul class="tabs">
-                  <li class="tab-link current" data-tab="calendar">행사 일정표</li>
+                  <li class="tab-link current" data-tab="tab_1">행사 일정표</li>
                   <li class="tab-link" data-tab="tab_2">체험마당 및 부대행사</li>
                   <li class="tab-link" data-tab="tab_3">동반행사</li>
                 </ul>
                 <!-- 시간표 -->
-                <div id='calendar' class="tab-content current"></div>
                 <div id="tab_1" class="tab-content current">
-                    <table border='1'>
-                      <tr id="title">
-                        <th>일</th>
-                        <th>월</th>
-                        <th>화</th>
-                        <th>수</th>
-                        <th>목</th>
-                        <th>금</th>
-                        <th>토</th>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>4</td>
-                        <td>5</td>
-                      </tr>
-                      <tr>
-                        <td>6</td>
-                        <td>7</td>
-                        <td>8</td>
-                        <td>9</td>
-                        <td>10</td>
-                        <td>11</td>
-                        <td>12</td>
-                      </tr>
-                      <tr>
-                        <td>13</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                    </table>
+                  <div id='calendar1'></div>
                     <hr>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
                 <div id="tab_2" class="tab-content">
-                  <table border='1'>
-                      <tr id="title">
-                        <th>일</th>
-                        <th>월</th>
-                        <th>화</th>
-                        <th>수</th>
-                        <th>목</th>
-                        <th>금</th>
-                        <th>토</th>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>4</td>
-                        <td>5</td>
-                      </tr>
-                      <tr>
-                        <td>6</td>
-                        <td>7</td>
-                        <td>8</td>
-                        <td>9</td>
-                        <td>10</td>
-                        <td>11</td>
-                        <td>12</td>
-                      </tr>
-                      <tr>
-                        <td>13</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                    </table>
+                  <div id='calendar2'></div>
                   <hr>
                     <p>Aorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
                 <div id="tab_3" class="tab-content">
-                  <table border='1'>
-                      <tr id="title">
-                        <th>일</th>
-                        <th>월</th>
-                        <th>화</th>
-                        <th>수</th>
-                        <th>목</th>
-                        <th>금</th>
-                        <th>토</th>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>4</td>
-                        <td>5</td>
-                      </tr>
-                      <tr>
-                        <td>6</td>
-                        <td>7</td>
-                        <td>8</td>
-                        <td>9</td>
-                        <td>10</td>
-                        <td>11</td>
-                        <td>12</td>
-                      </tr>
-                      <tr>
-                        <td>13</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                    </table>
+                  <div id='calendar3'></div>
                   <hr>
                     <p>Korem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
