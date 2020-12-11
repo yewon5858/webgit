@@ -53,23 +53,30 @@ ul.navbar li{
   flex:5;
 }
 #banner {
-  display: inline-block;
   font-size : 30px;
   text-align:center;
-  margin: 5px;
-  padding: 15px 20px;
+  max-width: 1000px;
+  position: relative; 
+  margin: auto; 
+  margin-top: 25px;
+  padding : 30px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  align-content: center;
 }
 .main_content > .map {
   background-image: url("img/map.jpg");
   background-size: contain;
   width:1050px;
-  height:500px;
-  margin:20px;
-  margin-top:5%;
-  margin-left: 7.5%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content:center;
+  height:470px;
+  max-width: 1000px;
+  position: relative; 
+  margin: auto; 
+  margin-top: 25px;
+  padding : 30px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  align-content: center;
 }
 /*구역1,2,3 깊이 및 위치 조정*/
 .map_area1,.map_area2,.map_area3{
@@ -78,14 +85,37 @@ ul.navbar li{
 .map_area1 {
   width:48%;
   height:53%;
+  max-width: 1000px;
+  position: relative; 
+  margin: auto; 
+  margin-left: -30px;
+  margin-top: -20px;
+  padding : 30px;
+  padding-bottom: 20px;
+  padding-top: -20px;
 }
 .map_area2 {
   width:48%;
   height:53%;
+  max-width: 1000px;
+  position: relative; 
+  margin: auto; 
+  margin-left: 500px;
+  margin-top: -290px;
+  padding : 30px;
+  padding-bottom: 20px;
+  padding-top: -20px;
 }
 .map_area3 {
   width:100%;
   height:46%;
+  max-width: 1000px;
+  position: relative; 
+  margin: auto; 
+  margin-left: -25px;
+  padding : 30px;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 /*위치 아이콘 깊이 및 위치 조정*/
@@ -95,13 +125,13 @@ ul.navbar li{
   z-index:1;
 }
 #location1_icon1{/*진주성 야경*/
-  left:40%;
-  top:60%;
+  left:30%;
+  top:50%;
   position: relative;
 }
 #location1_icon2{/*불꽃놀이*/
-  left:40%;
-  top:70%;
+  left:35%;
+  top:65%;
   position: relative;
 }
 #location1_icon3{/*수상등*/
@@ -111,32 +141,31 @@ ul.navbar li{
 }
 #location2_icon1{/*드라마 세트장*/
   left:35%;
-  top:30%;
+  top:15%;
   position: relative;
 }
 #location2_icon2{/*먹거리*/
-  left:48%;
-  top:40%;
+  left:44%;
+  top:32%;
   position: relative;
 }
 #location3_icon1{/*소망등 터널*/
   left:40%;
-  top:18%;
+  top:-8%;
   position: relative;
 }
 #location3_icon2{/*유등 띄우기*/
-  left:43%;
-  top:-17%;
+  left:40%;
+  top:-41%;
   position: relative;
 }
 #location3_icon3{/*진주교*/
-  left:46%;
-  top:5%;
+  left:45%;
+  top:-20%;
   position: relative;
 }
 
 /*구역1,2,3 시작*/
-
 #area1,#area2,#area3 {
   position: relative;
   overflow: hidden;
