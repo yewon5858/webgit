@@ -33,6 +33,10 @@ ul.navbar li::after {
 }
 .navbar .nav_title {
   font-size : 20px;
+  color: white !important;
+}
+ul.navbar li a:hover:not(.nav_title){
+  color: white;
 }
 ul.navbar a {
   text-decoration:none;
@@ -44,6 +48,28 @@ ul.navbar a {
 }
 ul.navbar li{
   text-decoration:none;
+}
+
+/* 아이콘 구현 */
+ul.navbar li a.moveToarea::before {
+  background-image: url("https://ifh.cc/g/JMSyku.png");
+  background-size: 29px 30px;
+  background-repeat:no-repeat;
+  content: " ";
+  display: inline-block;
+  vertical-align: middle;
+  width: 27%; 
+  height: 35px;
+}
+ul.navbar li a.moveToarea1::before, a.moveToarea2::before, a.moveToarea3::before {
+  background-image: url("https://ifh.cc/g/pvKrE9.png");
+  background-size: 24px 30px;
+  background-repeat:no-repeat;
+  vertical-align: middle;
+  content: " ";
+  display: inline-block;
+  width: 23%; 
+  height: 35px; 
 }
 
 /* main_content */
