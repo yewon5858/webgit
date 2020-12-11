@@ -133,8 +133,13 @@ ul.tabs li.current{
     box-shadow: 0 6px 10px -4px rgba(0,0,0,.15);
     border-radius: 0 10px 10px 10px;
 }
-/* .tab-content.current > div {
-} */
+/* 자세한 일정표 */
+.tablecard1{
+  border: solid 1px #E7E7E7;
+  border-radius: 5px;
+  margin:20px;
+  padding:20px 30px;
+}
 
 /*추가*/
 #wrap{
