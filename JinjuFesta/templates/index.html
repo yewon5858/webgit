@@ -79,13 +79,30 @@
                 <center> 
                     <h2 id = "area1">구역 1</h2>
                     <br>
-                    <a href="#area1_1" id="night" onclick="javascript:layer_popup('#area1_1')">진주성의 야경</a>
-                    <p id="nigth"></p>
-                    <p id = "jinju"></p>
+                    <a href="#a1-1" class="btn-example" onclick="javascript:layer_popup('#a1-1')">진주성의 야경</a>
                 </center> 
                        
                 <!-- 이미지는 임의로 넣어놨습니당.. 파일로 바꾸깅 -->
                 <div class="container1"> 
+                    <div id="a1-1" class="pop-layer">
+                        <div class="pop-container">
+                            <div class="pop-conts">
+                                <!--content //-->
+                                <p class="ctxt mb20">진주성의 야경<br>
+                                    임진왜란의 전적지이자,<br>
+                                    지금은 진주시의 랜드마크로 자리잡은 진주성의 야경입니다.<br>
+                                    성벽의 불빛과 위엄있는 촉석루의 모습을 볼 수 있어요.<br>
+
+                                </p>
+            
+                                <div class="btn-r">
+                                    <a href="#" class="btn-layerClose">Close</a>
+                                </div>
+                                <!--// content-->
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="slide"> 
                         <div class="slideNumber">1</div> 
                         <img src= "{% static 'img/web/night1.jpg' %}"> 
@@ -121,35 +138,32 @@
                     </div>
                 </div>
                 
-                <div id="area1_1" class="pop_layer">
-                    <div class="dim-layer">
-                    <div class="dimBg"></div>
+                <center> 
+                    <br>
+                    <a href="#a1-2" class="btn-example" onclick="javascript:layer_popup('#a1-2')">불꽃놀이</a>
+                </center> 
+
+                <!-- 이미지는 임의로 넣어놨습니당.. 파일로 바꾸깅1 -->
+                <div class="container1"> 
+                    <div id="a1-2" class="pop-layer">
                         <div class="pop-container">
                             <div class="pop-conts">
                                 <!--content //-->
-                                <p class="ctxt mb20">진주성의 야경<br>
-                                    임진왜란의 전적지이자,
-                                    지금은 진주시의 랜드마크로 자리잡은 진주성의 야경입니다.
-                                    성벽의 불빛과 위엄있는 촉석루의 모습을 볼 수 있어요.
-                                    
+                                <p class="ctxt mb20">불꽃놀이<br>
+                                    유등축제의 하이라이트, 불꽃놀이 입니다.<br>
+                                    하늘을 수놓은 불꽃들의 향연을 놓치지 마세요.<br>
+                                    불꽃놀이 일정은 달력 페이지를 참고해주세요.<br>
+
                                 </p>
-                
+            
                                 <div class="btn-r">
-                                    <a href="#night" class="btn-layerClose">Close</a>
+                                    <a href="#" class="btn-layerClose">Close</a>
                                 </div>
                                 <!--// content-->
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <center> 
-                    <br>
-                    <a href="#area1_2" class="btn-example" id="firework" onclick="javascript:layer_popup('#area1_2')">불꽃놀이</a>
-                </center> 
-                       
-                <!-- 이미지는 임의로 넣어놨습니당.. 파일로 바꾸깅1 -->
-                <div class="container1"> 
                     <div class="slide1"> 
                         <div class="slideNumber">1</div> 
                         <img src= "{% static 'img/web/fire1.jpg' %}"> 
@@ -185,19 +199,24 @@
                     </div>
                 </div>
 
-                <div class="dim-layer">
-                    <div class="dimBg"></div>
-                    <div id="area1_2" class="pop-layer">
+                <center> 
+                    <br>
+                    <a href="#a1-3" class="btn-example" onclick="javascript:layer_popup('#a1-3')">수상등</a>
+                </center> 
+
+                <!-- 이미지는 임의로 넣어놨습니당.. 파일로 바꾸깅2 -->
+                <div class="container1"> 
+                    <div id="a1-3" class="pop-layer">
                         <div class="pop-container">
                             <div class="pop-conts">
                                 <!--content //-->
-                                <p class="ctxt mb20">불꽃놀이<br>
-                                    유등축제의 하이라이트, 불꽃놀이 입니다.
-                                    하늘을 수놓은 불꽃들의 향연을 놓치지 마세요.
-                                    불꽃놀이 일정은 달력 페이지를 참고해주세요.
-                                    
+                                <p class="ctxt mb20">수상등<br>
+                                    남강을 따라 잔잔하게 떠 있는 수상등입니다. <br>
+                                    다양한 색깔과 모양을 가진 수상등을 감상하며 <br>
+                                    그 속에 숨겨진 이야기들도 찾아보아요. <br>
+
                                 </p>
-                
+            
                                 <div class="btn-r">
                                     <a href="#" class="btn-layerClose">Close</a>
                                 </div>
@@ -205,15 +224,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <center> 
-                    <br>
-                    <a href="#area1_3" class="btn-example" id="lamp" onclick="javascript:layer_popup('#area1_3')">수상등</a>
-                </center> 
-                       
-                <!-- 이미지는 임의로 넣어놨습니당.. 파일로 바꾸깅2 -->
-                <div class="container1"> 
                     <div class="slide2"> 
                         <div class="slideNumber">1</div> 
                         <img src= "{% static 'img/web/lamp2.jpg' %}"> 
@@ -251,38 +262,36 @@
                 <br>
             </div>
 
-            <div class="dim-layer">
-                <div class="dimBg"></div>
-                <div id="area1_3" class="pop-layer">
-                    <div class="pop-container">
-                        <div class="pop-conts">
-                            <!--content //-->
-                            <p class="ctxt mb20">수상등<br>
-                                남강을 따라 잔잔하게 떠 있는 수상등입니다.
-                                다양한 색깔과 모양을 가진 수상등을 감상하며
-                                그 속에 숨겨진 이야기들도 찾아보아요.
-                                
-                            </p>
-            
-                            <div class="btn-r">
-                                <a href="#" class="btn-layerClose">Close</a>
-                            </div>
-                            <!--// content-->
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <br>
             <div class = "areabox2">
                 <center> 
                     <h2 id = "area2">구역 2</h2>
                     <br>
-                    <a href="#area2_1" class="btn-example" id="drama" onclick="javascript:layer_popup('#area2_1')">드라마 세트</a>
+                    <a href="#a2-1" class="btn-example" onclick="javascript:layer_popup('#a2-1')">드라마 세트</a>
                 </center> 
                        
                 <!-- 이미지는 임의로 넣어놨습니당.. 파일로 바꾸깅3 -->
                 <div class="container1"> 
+                    <div id="a2-1" class="pop-layer">
+                        <div class="pop-container">
+                            <div class="pop-conts">
+                                <!--content //-->
+                                <p class="ctxt mb20">드라마세트<br>
+                                    유등축제 기간의 진주에서는 <br>
+                                    코리아 드라마 페스티벌이 개최됩니다. <br> 
+                                    전 세계로 뻗어나가는 한국의 드라마를 다채롭게 체험해보세요. <br>
+
+
+                                </p>
+            
+                                <div class="btn-r">
+                                    <a href="#" class="btn-layerClose">Close</a>
+                                </div>
+                                <!--// content-->
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="slide3"> 
                         <div class="slideNumber">1</div> 
                         <img src= "{% static 'img/web/drama1.jpg' %}"> 
@@ -317,20 +326,26 @@
                         </span> 
                     </div>
                 </div>
-
-                <div class="dim-layer">
-                    <div class="dimBg"></div>
-                    <div id="area2_1" class="pop-layer">
+                       
+                <center> 
+                    <br>
+                    <a href="#a2-2" class="btn-example" onclick="javascript:layer_popup('#a2-2')">먹거리</a>
+                </center> 
+                       
+                <!-- 이미지는 임의로 넣어놨습니당.. 파일로 바꾸깅4 -->
+                <div class="container1"> 
+                    <div id="a2-2" class="pop-layer">
                         <div class="pop-container">
                             <div class="pop-conts">
                                 <!--content //-->
-                                <p class="ctxt mb20">드라마 세트<br>
-                                    유등축제 기간의 진주에서는 
-                                    코리아 드라마 페스티벌이 개최됩니다. 
-                                    전 세계로 뻗어나가는 한국의 드라마를 다채롭게 체험해보세요.
-                                    
+                                <p class="ctxt mb20">먹거리<br>
+                                    축제의 별미는 뭐니뭐니해도 먹거리! <br>
+                                    강변을 따라 펼쳐진 다양한 먹거리부스과 함께 <br>
+                                    배부른 축제를 즐겨보세요. <br>
+
+
                                 </p>
-                
+            
                                 <div class="btn-r">
                                     <a href="#" class="btn-layerClose">Close</a>
                                 </div>
@@ -338,15 +353,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                       
-                <center> 
-                    <br>
-                    <a href="#area2_2" class="btn-example" id="food" onclick="javascript:layer_popup('#area2_2')">먹거리</a>
-                </center> 
-                       
-                <!-- 이미지는 임의로 넣어놨습니당.. 파일로 바꾸깅4 -->
-                <div class="container1"> 
+
                     <div class="slide4"> 
                         <div class="slideNumber">1</div> 
                         <img src= "{% static 'img/web/food1.jpg' %}"> 
@@ -383,38 +390,36 @@
                 <br>
             </div>
 
-            <div class="dim-layer">
-                <div class="dimBg"></div>
-                <div id="area2_2" class="pop-layer">
-                    <div class="pop-container">
-                        <div class="pop-conts">
-                            <!--content //-->
-                            <p class="ctxt mb20">먹거리<br>
-                                축제의 별미는 뭐니뭐니해도 먹거리!
-                                강변을 따라 펼쳐진 다양한 먹거리부스과 함께
-                                배부른 축제를 즐겨보세요.
-                                
-                            </p>
-            
-                            <div class="btn-r">
-                                <a href="#" class="btn-layerClose">Close</a>
-                            </div>
-                            <!--// content-->
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <br>
             <div class = "areabox3">
                     <center> 
                         <h2 id = "area3">구역 3</h2>
                         <br>
-                        <a href="#area3_1" class="btn-example" id="somang" onclick="javascript:layer_popup('#area3_1')">소망등 터널</a>
+                        <a href="#a3-1" class="btn-example" onclick="javascript:layer_popup('#a3-1')">소망등 터널</a>
                     </center> 
                            
                     <!-- 이미지는 임의로 넣어놨습니당.. 파일로 바꾸깅3 -->
                     <div class="container1"> 
+                        <div id="a3-1" class="pop-layer">
+                            <div class="pop-container">
+                                <div class="pop-conts">
+                                    <!--content //-->
+                                    <p class="ctxt mb20">소망등 터널<br>
+                                        사람들의 소중한 소망이 담긴 터널을 걸어보세요. <br>
+                                        당신의 소망은 무엇인가요? <br>
+                                        공식홈페이지의 신청을 통해 당신의 소망도 달 수 있답니다. <br>
+
+    
+                                    </p>
+                
+                                    <div class="btn-r">
+                                        <a href="#" class="btn-layerClose">Close</a>
+                                    </div>
+                                    <!--// content-->
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="slide5"> 
                             <div class="slideNumber">1</div> 
                             <img src= "{% static 'img/web/somang1.jpg' %}"> 
@@ -449,20 +454,25 @@
                             </span> 
                         </div>
                     </div>
-
-                    <div class="dim-layer">
-                        <div class="dimBg"></div>
-                        <div id="area3_1" class="pop-layer">
+                           
+                    <center> 
+                        <br>
+                        <a href="#a3-2" class="btn-example" onclick="javascript:layer_popup('#a3-2')">유등띄우기</a>
+                    </center> 
+                           
+                    <!-- 이미지는 임의로 넣어놨습니당.. 파일로 바꾸깅1 -->
+                    <div class="container1"> 
+                        <div id="a3-2" class="pop-layer">
                             <div class="pop-container">
                                 <div class="pop-conts">
                                     <!--content //-->
-                                    <p class="ctxt mb20">소망등 터널<br>
-                                        사람들의 소중한 소망이 담긴 터널을 걸어보세요.
-                                        당신의 소망은 무엇인가요?
-                                        공식홈페이지의 신청을 통해 당신의 소망도 달 수 있답니다.
-                                        
+                                    <p class="ctxt mb20">유등띄우기<br>
+                                        유등은 임진왜란 중 성 밖의 가족에게 안부를 전하는 <br>
+                                        통신수단으로 사용되었다고 합니다. <br>
+                                        당신의 이야기가 담긴 유등을 강물에 띄워 보내보세요. <br>
+    
                                     </p>
-                    
+                
                                     <div class="btn-r">
                                         <a href="#" class="btn-layerClose">Close</a>
                                     </div>
@@ -470,15 +480,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                           
-                    <center> 
-                        <br>
-                        <a href="#area3_2" class="btn-example" id="llamp" onclick="javascript:layer_popup('#area3_2')">유등 띄우기</a>
-                    </center> 
-                           
-                    <!-- 이미지는 임의로 넣어놨습니당.. 파일로 바꾸깅1 -->
-                    <div class="container1"> 
+
                         <div class="slide6"> 
                             <div class="slideNumber">1</div> 
                             <img src= "{% static 'img/web/llamp1.jpg' %}"> 
@@ -513,19 +515,22 @@
                     </div>
                 </div>
 
-                <div class="dim-layer">
-                    <div class="dimBg"></div>
-                    <div id="area3_2" class="pop-layer">
+                <center> 
+                    <br>
+                    <a href="#a3-3" class="btn-example" onclick="javascript:layer_popup('#a3-3')">진주교</a>
+                </center> 
+                       
+                <!-- 이미지는 임의로 넣어놨습니당.. 파일로 바꾸깅1 -->
+                <div class="container1"> 
+                    <div id="a3-3" class="pop-layer">
                         <div class="pop-container">
                             <div class="pop-conts">
                                 <!--content //-->
-                                <p class="ctxt mb20">유등띄우기<br>
-                                    유등은 임진왜란 중 성 밖의 가족에게 안부를 전하는 
-                                    통신수단으로 사용되었다고 합니다.
-                                    당신의 이야기가 담긴 유등을 강물에 띄워 보내보세요. 
-                                    
+                                <p class="ctxt mb20">진주교<br>
+                                    진주교를 따라 길게 펼쳐진 앵두알 터널이 신비로움을 자아냅니다. <br>
+                                    반짝이는 진주교에서 인생샷 남기기, 빼놓지 마세요! <br>
                                 </p>
-                
+            
                                 <div class="btn-r">
                                     <a href="#" class="btn-layerClose">Close</a>
                                 </div>
@@ -533,15 +538,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <center> 
-                    <br>
-                    <a href="#area3_3" class="btn-example" id="bridge" onclick="javascript:layer_popup('#area3_3')">진주교</a>
-                </center> 
-                       
-                <!-- 이미지는 임의로 넣어놨습니당.. 파일로 바꾸깅1 -->
-                <div class="container1"> 
                     <div class="slide7"> 
                         <div class="slideNumber">1</div> 
                         <img src= "{% static 'img/web/bridge1.jpg' %}"> 
@@ -575,27 +572,6 @@
                     </span> 
                 </div>
             </div>
-
-            <div class="dim-layer">
-                <div class="dimBg"></div>
-                <div id="area3_3" class="pop-layer">
-                    <div class="pop-container">
-                        <div class="pop-conts">
-                            <!--content //-->
-                            <p class="ctxt mb20">진주교<br>
-                                진주교를 따라 길게 펼쳐진 앵두알 터널이 신비로움을 자아냅니다. 
-                                반짝이는 진주교에서 인생샷 남기기, 빼놓지 마세요!
-                            </p>
-            
-                            <div class="btn-r">
-                                <a href="#" class="btn-layerClose">Close</a>
-                            </div>
-                            <!--// content-->
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </div>
                 <script src="{% static 'slider.js' %}"></script>
             <div class="footer"></div>

@@ -366,7 +366,7 @@ ul.navbar li{
 .dim-layer {
   display: none;
   position: fixed;
-  _position: absolute;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
