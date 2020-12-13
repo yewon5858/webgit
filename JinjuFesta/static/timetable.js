@@ -14,9 +14,33 @@ $(document).ready(function(){
 // 달력 1
 document.addEventListener('DOMContentLoaded', function() {
   var calendarEl = document.getElementById('calendar1');
-  
+
   var calendar = new FullCalendar.Calendar(calendarEl, {
-    initialView: 'dayGridMonth'
+    
+    initialView: 'dayGridMonth',
+    locale : 'ko',
+    headerToolbar: {
+
+      left: 'prev',
+
+      center: 'title',
+
+      right: 'next today,dayGridMonth'
+
+     },
+     events: [
+      {
+        title: 'Business Lunch',
+        start: '2020-12-03',
+      },
+      {
+        title: 'Meeting',
+        start: '2019-08-13T11: 00: 00',
+        constraint: 'availableForMeeting', // defined below
+        color: '# 257e4a'
+      },
+    ]
+
   });
   calendar.render();
 });
@@ -26,7 +50,14 @@ document.addEventListener('click', function() {
   var calendarEl = document.getElementById('calendar2');
   
   var calendar = new FullCalendar.Calendar(calendarEl, {
-    initialView: 'dayGridMonth'
+    initialView: 'dayGridMonth',
+    events: [
+      {
+        title: 'All Day Event',
+        start: '2020-10-02',
+        end: '2020-10-14'
+      }
+    ]
   });
   calendar.render();
 });
@@ -36,7 +67,15 @@ document.addEventListener('click', function() {
   var calendarEl = document.getElementById('calendar3');
   
   var calendar = new FullCalendar.Calendar(calendarEl, {
-    initialView: 'dayGridMonth'
+    timeZone: 'local',
+    initialView: 'dayGridMonth' ,
+    event: [
+      {
+        id: '이이이',
+        title : 'asdfadf',
+        start : '2020-10-2'
+      }
+    ]
   });
   calendar.render();
 });
