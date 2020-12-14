@@ -354,6 +354,7 @@ ul.navbar li{
   }
 
   .pop-layer {
+    margin: 50%;
     display: none;
     position: absolute;
     top: 50%;
