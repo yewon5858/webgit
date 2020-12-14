@@ -25,11 +25,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     headerToolbar: {
 
-      left: 'prev',
+      left: '',
 
       center: 'title',
-
-      right: 'next today,dayGridMonth'
+      right:''
 
      },
      events: [
@@ -252,23 +251,157 @@ document.addEventListener('click', function() {
     initialView: 'dayGridMonth',
     locale : 'ko',
     initialDate: '2020-10-01' ,
+    showNonCurrentDates: false, // 31일 이후로 안보이게
+    dayMaxEventRows: 4 , // 화면에 최대 몇개를 디스플레이 할것인가
     headerToolbar: {
 
-      left: 'prev',
+      left: '',
 
       center: 'title',
-
-      right: 'next today,dayGridMonth'
-
+      right:''
      },
      events: [
       {
+        backgroundColor: '#CFD75B',
+        borderColor: '#CFD75B',
+        title: '2019 진주남강유등축제 "워터라이딩쇼"',
+        start: '2020-10-01',
+        end: '2020-10-13'
+      },
+      {
         backgroundColor: '#F9D8AF',
         borderColor: '#F9D8AF',
-        title: '2019 진주남강유등축제 &#39;워터라이딩쇼&#39;',
+        title: '소망등 달기 체험',
         start: '2020-10-01',
-        end: '2020-10-01'
+        end: '2020-10-13'
       },
+      {
+        backgroundColor: '#F9D8AF',
+        borderColor: '#F9D8AF',
+        title: '소형등 만들기 체험',
+        start: '2020-10-01',
+        end: '2020-10-13'
+      },
+      {
+        backgroundColor: '#F9D8AF',
+        borderColor: '#F9D8AF',
+        title: '유등 만들어 띄우기 체험',
+        start: '2020-10-01',
+        end: '2020-10-13'
+      },
+      {
+        backgroundColor: '#F9D8AF',
+        borderColor: '#F9D8AF',
+        title: '사랑다리 건너기 체험',
+        start: '2020-10-01',
+        end: '2020-10-13'
+      },
+      {
+        backgroundColor: '#F9D8AF',
+        borderColor: '#F9D8AF',
+        title: '사랑의 프러포즈 이벤트(로멘틱연애조작단)',
+        start: '2020-10-01',
+        end: '2020-10-13'
+      },
+      {
+        backgroundColor: '#F9D8AF',
+        borderColor: '#F9D8AF',
+        title: '시민참여 등 만들기 체험',
+        start: '2020-10-01',
+        end: '2020-10-13'
+      },
+      {
+        backgroundColor: '#F9D8AF',
+        borderColor: '#F9D8AF',
+        title: '전통놀이 체험',
+        start: '2020-10-01',
+        end: '2020-10-13'
+      },
+      {
+        backgroundColor: '#F9D8AF',
+        borderColor: '#F9D8AF',
+        title: '진주음식큰잔치 및 농.특산품 판매코너',
+        start: '2020-10-01',
+        end: '2020-10-13'
+      },
+      {
+        backgroundColor: '#F9D8AF',
+        borderColor: '#F9D8AF',
+        title: '소원성취 나무 등체험',
+        start: '2020-10-01',
+        end: '2020-10-13'
+      },
+      {
+        backgroundColor: '#F9D8AF',
+        borderColor: '#F9D8AF',
+        title: '스템프랠리',
+        start: '2020-10-01',
+        end: '2020-10-13'
+      },
+      {
+        backgroundColor: '#EBB281',
+        borderColor: '#EBB281',
+        title: '대한민국 등 공모 대전출품작 전시',
+        start: '2020-10-01',
+        end: '2020-10-13'
+      },
+      {
+        backgroundColor: '#F9D8AF',
+        borderColor: '#F9D8AF',
+        title: '유람선으로 아름다운 등 관람체험',
+        start: '2020-10-01',
+        end: '2020-10-13'
+      },
+      {
+        backgroundColor: '#F9D8AF',
+        borderColor: '#F9D8AF',
+        title: '로봇물고기 유영 쇼',
+        start: '2020-10-01',
+        end: '2020-10-13'
+      },
+      {
+        backgroundColor: '#ECA83A',
+        borderColor: '#ECA83A',
+        title: '남가람 어울마당',
+        start: '2020-10-01',
+        end: '2020-10-13'
+      },
+      {
+        backgroundColor: '#F9D8AF',
+        borderColor: '#F9D8AF',
+        title: 'DJ와 함께 하는 추억의 음악다방 ',
+        start: '2020-10-01',
+        end: '2020-10-13'
+      },
+      {
+        backgroundColor: '#F9D8AF',
+        borderColor: '#F9D8AF',
+        title: 'MBC경남 &#39;유등LIVE&#39;',
+        start: '2020-10-01',
+        end: '2020-10-13'
+      },
+      {
+        backgroundColor: '#F9D8AF',
+        borderColor: '#F9D8AF',
+        title: '빛터널',
+        start: '2020-10-01',
+        end: '2020-10-13'
+      },
+      {
+        backgroundColor: '#F9D8AF',
+        borderColor: '#F9D8AF',
+        title: '축등 설치 ',
+        start: '2020-10-01',
+        end: '2020-10-13'
+      },
+      {
+        backgroundColor: '#F9D8AF',
+        borderColor: '#F9D8AF',
+        title: '수상 등 카페 운영',
+        start: '2020-10-01',
+        end: '2020-10-13'
+      },
+
     ]
   });
   calendar.render();
@@ -281,25 +414,81 @@ document.addEventListener('click', function() {
   var calendar = new FullCalendar.Calendar(calendarEl, {
     initialView: 'dayGridMonth',
     locale : 'ko',
+    showNonCurrentDates: false, // 31일 이후로 안보이게
+    dayMaxEventRows: 4 , // 화면에 최대 몇개를 디스플레이 할것인가
+    initialDate: '2020-10-01' ,
+
     headerToolbar: {
 
-      left: 'prev',
+      left: '',
 
       center: 'title',
-
-      right: 'next today,dayGridMonth'
+      right:''
 
      },
      events: [
       {
-        title: 'Business Lunch',
-        start: '2020-12-03',
+        backgroundColor: '#F9D8AF',
+        borderColor: '#F9D8AF',
+        title: '진주성 수성중군영 교대의식',
+        start: '2020-10-01',
+        end: '2020-10-02'
       },
       {
-        title: 'Meeting',
-        start: '2019-08-13T11: 00: 00',
-        constraint: 'availableForMeeting', // defined below
-        color: '# 257e4a'
+        backgroundColor: '#F9D8AF',
+        borderColor: '#F9D8AF',
+        title: '박물관 문화체험',
+        start: '2020-10-01',
+        end: '2020-10-13'
+      },
+      {
+        backgroundColor: '#ECA83A',
+        borderColor: '#ECA83A',
+        title: '3D입체영화 진주성전투',
+        start: '2020-10-01',
+        end: '2020-10-13'
+      },
+      {
+        backgroundColor: '#CFD75B',
+        borderColor: '#CFD75B',
+        title: '2019한일문화교류특별전',
+        start: '2020-10-01',
+        end: '2020-10-13'
+      },
+      {
+        backgroundColor: '#EBB281',
+        borderColor: '#EBB281',
+        title: '거리아트페스티벌',
+        start: '2020-10-01',
+        end: '2020-10-13'
+      },
+      {
+        backgroundColor: '#F9D8AF',
+        borderColor: '#F9D8AF',
+        title: '진진주성 전통무기 및 무예체험',
+        start: '2020-10-11',
+        end: '2020-10-13'
+      },
+      {
+        backgroundColor: '#F9D8AF',
+        borderColor: '#F9D8AF',
+        title: '진주성 한복체험',
+        start: '2020-10-01',
+        end: '2020-10-13'
+      },
+      {
+        backgroundColor: '#F9D8AF',
+        borderColor: '#F9D8AF',
+        title: '제 13회 대한민국 농악축제',
+        start: '2020-10-05',
+        end: '2020-10-05'
+      },
+      {
+        backgroundColor: '#F9D8AF',
+        borderColor: '#F9D8AF',
+        title: '진주 역사 골든벨',
+        start: '2020-10-12',
+        end: '2020-10-12'
       },
     ]
   });
