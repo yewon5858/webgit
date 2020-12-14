@@ -71,6 +71,11 @@ ul.navbar li{
   flex-wrap: wrap;
   justify-content:center;
 }
+.main_content a{
+  font-size: 20px;
+  text-decoration: none;
+  color: #2c2c2c;
+}
 /*구역1,2,3 깊이 및 위치 조정*/
 .map_area1,.map_area2,.map_area3{
   z-index:0;
