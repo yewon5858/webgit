@@ -7,6 +7,7 @@ body {
 }
 .container{
   display:flex;
+  height: auto;
 }
 
 /* navbar 수정 */
@@ -29,17 +30,21 @@ body {
   z-index:100;
   list-style:none;
 }
-ul.navbar li::after {
+/* ul.navbar li::after {
   float: right;
   content: "";
-}
+} */
 .navbar .nav_title {
   font-size : 20px;
+  color: white !important;
 }
-ul.navbar a {
+ul.navbar li a:hover:not(.nav_title){
+  color: white;
+}
+ul.navbar li a {
   text-decoration:none;
   text-align:center;
-  color:white;
+  color:#B6B6B6;
   display:block;
   margin: 10px;
   padding: 15px 20px;
@@ -47,6 +52,27 @@ ul.navbar a {
 ul.navbar li{
   text-decoration:none;
 }
+/* 아이콘 구현 */
+/* ul.navbar li a.moveToarea::before {
+  background-image: url("https://ifh.cc/g/JMSyku.png");
+  background-size: 29px 30px;
+  background-repeat:no-repeat;
+  content: " ";
+  display: inline-block;
+  vertical-align: middle;
+  width: 27%; 
+  height: 35px;
+}
+ul.navbar li a.moveToarea1::before, a.moveToarea2::before, a.moveToarea3::before {
+  background-image: url("https://ifh.cc/g/pvKrE9.png");
+  background-size: 24px 30px;
+  background-repeat:no-repeat;
+  vertical-align: middle;
+  content: " ";
+  display: inline-block;
+  width: 23%; 
+  height: 35px; 
+} */
 
 /* main_content */
 .main_content {
