@@ -55,7 +55,7 @@ ul.navbar li{
   text-decoration:none;
 }
 /* 아이콘 구현 */
-ul.navbar li a.A::before {
+/* ul.navbar li a.moveToarea::before {
   background-image: url("https://ifh.cc/g/JMSyku.png");
   background-size: 29px 30px;
   background-repeat:no-repeat;
@@ -65,17 +65,17 @@ ul.navbar li a.A::before {
   width: 27%; 
   height: 35px;
 }
-ul.navbar li a.B::before {
+ul.navbar li a.moveToarea1::before, a.moveToarea2::before, a.moveToarea3::before {
   background-image: url("https://ifh.cc/g/pvKrE9.png");
   background-size: 24px 30px;
   background-repeat:no-repeat;
   vertical-align: middle;
-  content: "";
+  content: " ";
   display: inline-block;
   width: 23%; 
-  height: 35px;
-  
-}
+  height: 35px; 
+} */
+
 /* 메인 컨텐츠 */
 .main_content {
 background-color: #f4f3ef;

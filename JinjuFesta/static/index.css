@@ -5,6 +5,7 @@ body {
 }
 .container{
   display:flex;
+  height: auto;
 }
 
 /* navbar 수정 */
@@ -27,9 +28,16 @@ body {
   z-index:100;
   list-style:none;
 }
-ul.navbar li::after {
+/* ul.navbar li::after {
   float: right;
   content: "";
+} */
+ul.navbar {
+  background-color: #2c2c2c;
+  padding: 10px;
+  flex:1;
+  margin:0;
+  flex-direction: column;
 }
 .navbar .nav_title {
   font-size : 20px;
@@ -38,10 +46,10 @@ ul.navbar li::after {
 ul.navbar li a:hover:not(.nav_title){
   color: white;
 }
-ul.navbar a {
+ul.navbar li a {
   text-decoration:none;
   text-align:center;
-  color:white;
+  color: #B6B6B6;
   display:block;
   margin: 10px;
   padding: 15px 20px;
@@ -51,7 +59,7 @@ ul.navbar li{
 }
 
 /* 아이콘 구현 */
-ul.navbar li a.moveToarea::before {
+/* ul.navbar li a.moveToarea::before {
   background-image: url("https://ifh.cc/g/JMSyku.png");
   background-size: 29px 30px;
   background-repeat:no-repeat;
@@ -70,7 +78,7 @@ ul.navbar li a.moveToarea1::before, a.moveToarea2::before, a.moveToarea3::before
   display: inline-block;
   width: 23%; 
   height: 35px; 
-}
+} */
 
 /* main_content */
 .main_content {
@@ -471,7 +479,7 @@ ul.navbar li a.moveToarea1::before, a.moveToarea2::before, a.moveToarea3::before
   }
 
 /*footer*/
-/* footer{
+footer{
   background-color:#afa0a7;
   max-width: 1000px;
   position: relative; 
@@ -495,5 +503,5 @@ footer > .section1, .section2, .section3, .section4{
 #official:hover { 
   color: rgb(58, 58, 194); 
   text-decoration: underline;
-} */
+}
 
