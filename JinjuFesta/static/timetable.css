@@ -10,6 +10,25 @@ height: auto;
 }
 
 /* 네비게이션 바 */
+.back-space{
+  background-color: #2c2c2c;
+  padding: 10px;
+  flex:1;
+  margin:0;
+  top: 10px;
+  z-index:90;
+}
+#sidebox {
+  position: absolute; 
+  padding: 0px;
+  margin:30px;
+  top: 10px;
+  flex:1;
+  background-color: #2c2c2c;
+  color: #fff;
+  z-index:100;
+  list-style:none;
+}
 ul.navbar {
   background-color: #2c2c2c;
   padding: 10px;
@@ -29,11 +48,34 @@ ul.navbar li a {
   text-align:center;
   color:#B6B6B6;
   display:block;
-
   margin: 10px;
   padding: 15px 20px;
 }
-
+ul.navbar li{
+  text-decoration:none;
+}
+/* 아이콘 구현 */
+ul.navbar li a.A::before {
+  background-image: url("https://ifh.cc/g/JMSyku.png");
+  background-size: 29px 30px;
+  background-repeat:no-repeat;
+  content: " ";
+  display: inline-block;
+  vertical-align: middle;
+  width: 27%; 
+  height: 35px;
+}
+ul.navbar li a.B::before {
+  background-image: url("https://ifh.cc/g/pvKrE9.png");
+  background-size: 24px 30px;
+  background-repeat:no-repeat;
+  vertical-align: middle;
+  content: "";
+  display: inline-block;
+  width: 23%; 
+  height: 35px;
+  
+}
 /* 메인 컨텐츠 */
 .main_content {
 background-color: #f4f3ef;
@@ -58,44 +100,8 @@ padding: 15px 20px;
 #tab_1, #tab_2, #tab_3 {
 margin: 0 10px;
 }
-table {
-border-collapse: collapse;
-width:100%;
-height: 500px;
-padding:10px;
-}
-table  #title {
-font-size:20px;
-height:40px;
-}
-table tr:not(#title){
-vertical-align:top;
-}
 .footer {
  background-color:#343537;
-}
-
-/* 아이콘 구현 */
-ul.navbar li a.A::before {
-  background-image: url("https://ifh.cc/g/JMSyku.png");
-  background-size: 29px 30px;
-  background-repeat:no-repeat;
-  content: " ";
-  display: inline-block;
-  vertical-align: middle;
-  width: 27%; 
-  height: 35px;
-}
-ul.navbar li a.B::before {
-  background-image: url("https://ifh.cc/g/pvKrE9.png");
-  background-size: 24px 30px;
-  background-repeat:no-repeat;
-  vertical-align: middle;
-  content: "";
-  display: inline-block;
-  width: 23%; 
-  height: 35px;
-  
 }
 
 /* 텝매뉴 구현 */
@@ -117,14 +123,21 @@ ul.tabs li.current{
   color: #222;
 }
 .tab-content{
-  display: none;
-  background:#ffffff;
-  padding: 15px;
+    display: none;
+    background:#ffffff;
+    padding: 15px;
 }
 .tab-content.current{
     display: inherit;
     box-shadow: 0 6px 10px -4px rgba(0,0,0,.15);
     border-radius: 0 10px 10px 10px;
+}
+/* 자세한 일정표 */
+.tablecard1{
+  border: solid 1px #E7E7E7;
+  border-radius: 5px;
+  margin:20px;
+  padding:20px 30px;
 }
 
 /*추가*/
@@ -168,3 +181,7 @@ ul.tabs li.current{
   opacity: 1;
   visibility: visible;
 }
+
+/* .fc-view-harness.fc-view-harness-active{
+  height: 873.333px!important;
+} */
