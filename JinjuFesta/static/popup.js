@@ -7,7 +7,8 @@ function layer_popup(el){
     var $el = $(el);    //레이어의 id를 $el 변수에 저장
     var isDim = $el.prev().hasClass('dimBg'); //dimmed 레이어를 감지하기 위한 boolean 변수
 
-    isDim ? $('.dim-layer').fadeIn() : $el.fadeIn();
+    isDim ? $('.dim-layer').fadeIn() : 
+    $el.fadeIn();
 
     var $elWidth = ~~($el.outerWidth()),
         $elHeight = ~~($el.outerHeight()),
