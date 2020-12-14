@@ -19,7 +19,7 @@ from JinjuFesta import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name='index'),
+    path('index/', views.index, name='index'),
     path('timetable/', views.timetable, name='timetable'),
-    path('main/', views.main, name='main'),
+    path('', views.main, name='main'),
 ]

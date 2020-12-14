@@ -471,7 +471,7 @@ ul.navbar li a.moveToarea1::before, a.moveToarea2::before, a.moveToarea3::before
   }
 
 /*footer*/
-/* footer{
+footer{
   background-color:#afa0a7;
   max-width: 1000px;
   position: relative; 
@@ -495,5 +495,5 @@ footer > .section1, .section2, .section3, .section4{
 #official:hover { 
   color: rgb(58, 58, 194); 
   text-decoration: underline;
-} */
+}
 
