@@ -9,6 +9,7 @@
         <script type = "text/javascript" src="{% static 'top.js' %}"></script>
         <script type = "text/javascript" src="{% static 'nav.js' %}"></script>
         <script type = "text/javascript" src="{% static 'slider.js' %}"></script>
+        <script src="{% static 'upbutton.js' %}"></script>
         <link rel="stylesheet" href="{% static 'main.css' %}">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -18,8 +19,8 @@
         <div class="container">
             <div class="back-space"></div>
             <ul class="navbar" id="sidebox">
-                <li><a href="#" class="nav_title">진주 유등축제</a></li>
-                <hr style="margin:20px 0">
+                <li><a href="{% url 'main' %}" class="nav_title">진주 유등축제</a></li>
+                    <hr style="margin:20px 0">
                 <li><a href="#" class>달력</a></li>
                 <li><a href="#" class>구역1</a></li>
                 <li><a href="#" class>구역2</a></li>
@@ -37,7 +38,6 @@
             </div>
             <div class="footer"></div>
             <a id="back-to-top"></a>
-            <script src="{% static 'upbutton.js' %}"></script>
      </div>
     </body>
 </html>
