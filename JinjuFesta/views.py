@@ -7,3 +7,6 @@ def index(request):
 
 def timetable(request):
     return render(request, 'timetable.html')
+
+def main(request):
+    return render(request, 'main.html')
