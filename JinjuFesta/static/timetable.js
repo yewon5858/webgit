@@ -51,12 +51,27 @@ document.addEventListener('click', function() {
   
   var calendar = new FullCalendar.Calendar(calendarEl, {
     initialView: 'dayGridMonth',
-    events: [
+    locale : 'ko',
+    headerToolbar: {
+
+      left: 'prev',
+
+      center: 'title',
+
+      right: 'next today,dayGridMonth'
+
+     },
+     events: [
       {
-        title: 'All Day Event',
-        start: '2020-10-02',
-        end: '2020-10-14'
-      }
+        title: 'Business Lunch',
+        start: '2020-12-03',
+      },
+      {
+        title: 'Meeting',
+        start: '2019-08-13T11: 00: 00',
+        constraint: 'availableForMeeting', // defined below
+        color: '# 257e4a'
+      },
     ]
   });
   calendar.render();
@@ -67,14 +82,28 @@ document.addEventListener('click', function() {
   var calendarEl = document.getElementById('calendar3');
   
   var calendar = new FullCalendar.Calendar(calendarEl, {
-    timeZone: 'local',
-    initialView: 'dayGridMonth' ,
-    event: [
+    initialView: 'dayGridMonth',
+    locale : 'ko',
+    headerToolbar: {
+
+      left: 'prev',
+
+      center: 'title',
+
+      right: 'next today,dayGridMonth'
+
+     },
+     events: [
       {
-        id: '이이이',
-        title : 'asdfadf',
-        start : '2020-10-2'
-      }
+        title: 'Business Lunch',
+        start: '2020-12-03',
+      },
+      {
+        title: 'Meeting',
+        start: '2019-08-13T11: 00: 00',
+        constraint: 'availableForMeeting', // defined below
+        color: '# 257e4a'
+      },
     ]
   });
   calendar.render();
