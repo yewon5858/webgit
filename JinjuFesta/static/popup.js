@@ -1,7 +1,6 @@
 $('.btn-example').click(function(){
     var $href = $(this).attr('href');
     layer_popup($href);
-    $(this).stop();
 });
 function layer_popup(el){
 
@@ -20,7 +19,6 @@ function layer_popup(el){
         $el.css({
             marginTop: -$elHeight /2,
             marginLeft: -$elWidth/2
-            
         })
     } else {
         $el.css({top: 0, left: 0});
