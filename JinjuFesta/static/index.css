@@ -366,8 +366,7 @@ ul.navbar li{
     left: 50%;
     width: 500px;
     height: auto;
-    background-color: #f4f3ef;
-    background-color: rgba(red, green, blue, 0.9);
+    background-color: rgba(243, 237, 237, 0.9);
     border: 5px solid #2c2c2c;
     z-index: 10;
   }
@@ -405,13 +404,13 @@ ul.navbar li{
     border: 1px solid #2c2c2c;
     background-color: #292929;
     font-size: 13px;
-    color: #f4f4fe;
+    color: rgba(243, 237, 237, 0.9);
     line-height: 25px;
   }
 
   a.btn-layerClose:hover {
     border: 1px solid #2c2c2c;
-    background-color: #f4f4fe;
+    background-color: rgba(243, 237, 237, 0.9);
     color: #292929;
   }
 
