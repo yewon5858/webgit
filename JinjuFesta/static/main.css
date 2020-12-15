@@ -30,10 +30,6 @@ body {
   z-index:100;
   list-style:none;
 }
-/* ul.navbar li::after {
-  float: right;
-  content: "";
-} */
 .navbar .nav_title {
   font-size : 20px;
   color: white !important;
